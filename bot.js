@@ -78,6 +78,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                         to: channelID,
                         message: 'arf'
                     });
+                    console.log('User is ' + user + '  User ID is ' + userID);
                 }
 
 
@@ -86,7 +87,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
             
             case 'birthday':
                 var name = String(arg1);
-                if (name === 'weilon' || name === 'Weilon' || name === 'whale') {
+                if (user === 'Densyg') {
                     bot.sendMessage({
                         to: channelID,
                         message: 'https://i.pinimg.com/originals/58/a9/41/58a941c56e9cf84178c34f05622409fc.jpg' // Nice picture of a whale saying "Happy Birthday"
@@ -94,7 +95,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                 } else {
                     bot.sendMessage({
                         to: channelID,
-                        message: 'It whale birthday. Not yours. *Sniffling dimwit*'
+                        message: 'It not your birthday. *Sniffling dimwit*'
                     });
                 }
                 
